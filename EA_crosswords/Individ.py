@@ -44,7 +44,7 @@ class Individ:
     def readWords(self):
         f = open("words.txt", "r")
         self.n = int(f.readline())
-        for i in range (0, self.n):
+        for i in range(0, self.n):
             line = f.readline()
             line = line.strip('\n').split(' ')
             self.x.append(line)

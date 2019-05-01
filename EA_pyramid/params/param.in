@@ -1,0 +1,5 @@
+mutation=0.3
+crossover=1
+population_size=40
+elite_size=10
+iterations=5000

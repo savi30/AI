@@ -2,15 +2,14 @@ import random
 
 
 class Population:
-    def __init__(self, individuals, problem):
+    def __init__(self, individuals):
         self.__individuals = individuals
-        self.__problem = problem
 
     def add(self, individual):
         self.__individuals.append(individual)
 
     def evaluate(self):
-        return sorted(self.__individuals, key=lambda x: x.fitness(), reverse=True)[0]
+        return sorted(self.__individuals, key=lambda x: x.fitness(), reverse=True)
 
     def selection(self):
         chance = random.randint(0, self.totalFitness())
@@ -20,4 +19,7 @@ class Population:
                 return x
 
     def totalFitness(self):
-        return sum(map(lambda x: x.fitnesS(), self.__individuals))
+        return sum(map(lambda x: x.fitness(), self.__individuals))
+
+    def getData(self):
+        return self.__individuals

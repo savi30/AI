@@ -1,0 +1,6 @@
+noParticles=100
+w=1.0
+c1=1.
+c2=2.5
+sizeOfNeighbourhood=20
+noOfIterations=100
